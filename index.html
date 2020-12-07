@@ -1,0 +1,115 @@
+<html>
+<head>
+  <title>Music Project</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+    <canvas class="centerCanvas"  height="500px" width="540px" id="myCanvas"></canvas>
+
+
+  <div class="centerRadio center">
+    <form id="keyselect" action="">
+      <input class="box" type="radio" name="key" value="SNES-Linux" > SNES-Linux
+      <input class="box" type="radio" name="key" value="Keyboard" checked> Keyboard
+      <input class="box" type="radio" name="key" value="SNES-Windows"> SNES-Windows
+    </form>
+    <div class="center">
+      <div id="keyboardInfo">
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="centerParagraph">
+    <div id="container">
+      <h2>SNES Controller</h2>
+      <p>
+        On 01/31/2018 I was asked to make an instument for my music apperication course.
+        Having little to no background in music, I decided to do what any <strike>good</strike> computer
+        science student would do. Program my own instument. My professor was very kind enough to allow me
+        to do so. With this assignment I made an SNES controller make different soundwaves, emulating what
+        you would find on an NES. It's nothing a purist would like and with how dirty this code was written,
+        id imagine people screaming that do music at this.
+        <br />
+        <br />
+        Ill go ahead and explain the notation.
+        <br/>
+        <br/>
+        <div class="center">
+          <h3>Normal Notes</h3>
+          <img class="musicNote3" src="buttons/LEFT.png" />
+          <img class="musicNote3" src="buttons/RIGHT.png" />
+          <img class="musicNote2" src="buttons/UP.png" />
+          <img class="musicNote2" src="buttons/DOWN.png" />
+          <br />
+          <br />
+          <img class="musicNote3" src="buttons/LEFT.png" />
+          <img src="buttons/L.png"/>
+          <img class="musicNote3" src="buttons/RIGHT.png" />
+          <img src="buttons/L.png"/>
+          <img class="musicNote2" src="buttons/UP.png" />
+          <img src="buttons/L.png"/>
+          <img class="musicNote2" src="buttons/DOWN.png" />
+          <img src="buttons/L.png"/>
+        </div>
+        <p>
+          The meat and potatos of this instument is done mostly with the d-pad of the controller.
+          This uses whatever soundwave is selected by using <img src="buttons/SELECT.png" /> to change
+          the timbre of the instument. The d-pad along used with the <img src="buttons/L.png" /> as a modifier
+          makes the sound go up in pitch to reach more than just four notes. Using diagonals will make noises
+          between the two sounds.
+        </p>
+        <br />
+        <br />
+        <div class="center">
+          <h3>Bass Notes</h3>
+          <img class="musicNote" src="buttons/A.png" />
+          <img class="musicNote" src="buttons/B.png" />
+          <img class="musicNote" src="buttons/X.png" />
+          <img class="musicNote" src="buttons/Y.png" />
+          <br />
+          <br />
+          <img class="musicNote" src="buttons/A.png" />
+          <img src="buttons/R.png"/>
+          <img class="musicNote" src="buttons/B.png" />
+          <img src="buttons/R.png"/>
+          <img class="musicNote" src="buttons/X.png" />
+          <img src="buttons/R.png"/>
+        </div>
+        <br />
+        <br />
+        <p>
+          The bass notes on the right side of the controller can be used in combos to make different sounds.
+          For example, if you press <img src="buttons/A.png" /> and <img src="buttons/B.png"/> at the same time
+          it will play a note inbetween those two notes. If you use a <img src="buttons/R.png"/> with any bass
+          notes, it will make the note sound higher. Giving you a good range to work with for a bassline.
+        </p>
+
+
+        <div class="center">
+          <h3>Snare</h3>
+          <img class="musicNote" src="buttons/X.png" />
+          <img src="buttons/R.png"/>
+          <p>
+            I was only really able to get a snare drum using a bit of whitenoise. If you cut off whitenoise
+            really quickly it makes a reasonably believable snare drum sound. It's enough to make this controller
+            be a one-man-band type of instument.
+          </p>
+
+        </div>
+
+
+
+      </p>
+
+    </div>
+  </div>
+
+
+</body>
+<script src="Tone.min.js"></script>
+<script src="main.js"></script>
+</html>

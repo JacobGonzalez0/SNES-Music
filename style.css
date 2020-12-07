@@ -1,0 +1,112 @@
+.centerCanvas {
+
+  padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right:auto;
+    display:block;
+    background-image:url("bg.jpg");
+    border-radius: 25px;
+    border:20px;
+    border-spacing:20px;
+    border-style:ridge;
+    clear:none;
+
+}
+.musicNote{
+  width:50px;
+  height:50px;
+}
+.musicNote2{
+  width:50px;
+  height:60px;
+}
+.musicNote3{
+  width:60px;
+  height:50px;
+}
+.keybind{
+  width:36px;
+  height:36px;
+}
+.keybind1{
+  width:70px;
+  height:36px;
+}
+.contain{
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  padding-left: 0;
+   padding-right: 0;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+
+}
+
+
+.rightbox{
+  border-radius: 25px;
+  border:20px;
+  border-spacing:20px;
+  border-style:ridge;
+  display:inline-block;
+  float:left;
+  background-color:white
+}
+
+.centerParagraph {
+
+  clear:both;
+  padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color:white;
+    background-image: url("dust_scratches.png");
+    border-radius: 25px;
+    border:20px;
+    border-spacing:20px;
+    border-style:ridge;
+}
+.centerRadio {
+
+  clear:both;
+  padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color:white;
+    background-image: url("dust_scratches.png");
+    border-radius: 25px;
+    border:20px;
+    border-spacing:20px;
+    border-style:ridge;
+}
+.box {
+
+  margin:15px;
+}
+
+#container {
+
+  margin: 20px;
+  display:block;
+  clear:both;
+
+}
+
+#container h2{
+
+  text-align:center;
+
+}
+body{
+  background-image:url("bgw.jpg")
+}
