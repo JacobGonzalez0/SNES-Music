@@ -5,7 +5,7 @@
     margin-left: auto;
     margin-right:auto;
     display:block;
-    background-image:url("bg.jpg");
+    background-image:url("/img/bg.jpg");
     border-radius: 25px;
     border:20px;
     border-spacing:20px;
@@ -68,7 +68,7 @@
     margin-right: auto;
     display: block;
     background-color:white;
-    background-image: url("dust_scratches.png");
+    background-image: url("/img/dust_scratches.png");
     border-radius: 25px;
     border:20px;
     border-spacing:20px;
@@ -83,7 +83,7 @@
     margin-right: auto;
     display: block;
     background-color:white;
-    background-image: url("dust_scratches.png");
+    background-image: url("/img/dust_scratches.png");
     border-radius: 25px;
     border:20px;
     border-spacing:20px;
@@ -108,5 +108,5 @@
 
 }
 body{
-  background-image:url("bgw.jpg")
+  background-image:url("/img/bgw.jpg")
 }
