@@ -33,11 +33,8 @@
             document.addEventListener("keydown", event => this.keyDown(event))
             document.addEventListener("keyup", event => this.keyUp(event))
 
-            this.sound = sound;
-
-            this.buttons = {
-                
-            }
+            this.sound = sound; //makes a pointer to the sound object
+            this.buttons = {}
 
             //setup binds
             this.keymap = {
@@ -53,8 +50,10 @@
                 78: "A3",
                 74: "A3#",
                 77: "B3"
-            }
+            } 
 
+            this.setBind(82, "D5") // R
+            this.setBind(9,"B4") //tests tab 
             
 
         }
@@ -84,6 +83,24 @@
 
         getButtonState(){
             return buttons;
+        }
+
+        setBind(keycode, note){
+            if(typeof keycode !== 'number') return false;
+            if(typeof note !== 'string') return false;
+            
+            var possibleNotes = ['a','b','c','d','e','f','g']
+
+            for(var i = 0; i < possibleNotes.length; i++){
+                //test if the first character of the note is proper
+                if(note[0].toLowerCase() == possibleNotes[i]){
+                    if(note[1] < 0 || note[1] >= 8) return false //checks if the octive is valid
+                    this.keymap[keycode] = note;
+                    return true; //makes sure the user knows it passed
+                }
+            }
+            
+            return false
         }
 
     }
