@@ -108,13 +108,16 @@
     class Sound{
 
         tones;
+        effects;
         vol;
 
         constructor(){
-            //stores all tones
+            //init variable types to array for holding tones and effects
             this.tones = []
+            this.effects = [];
             //setup volume object to pipe everything though
             this.vol = new Tone.Volume(-12).toDestination();
+            
         }
 
         createTone(type, release = 0.10){
@@ -131,7 +134,38 @@
             //create the synth object and pipe it to the volume object
             
             this.tones.push( new Tone.PolySynth(Tone.Synth, options).connect(this.vol) )
+            
             console.log(this.tones)
+        }
+
+        createEffect(type,options){
+            
+            //numbers can represent effects
+            //but strings will parse also
+
+            if(typeof type === "string"){
+
+                switch(type.toLowerCase()){
+
+                    case "reverb":
+                        this.effects.push( new Tone.Freeverb(options)
+                            .connect(this.vol));
+                            return true;
+                        break;
+                    case "distortion":
+                        this.effects.push( new Tone.Distortion(options)
+                            .connect(this.vol));
+                        return true;
+                        break;
+                    
+
+                }
+
+            }else if(typeof type === "number"){
+                //TODO: add ID's for different effects from tone.js
+            }else{
+                return false;
+            }
         }
 
         deleteTone(index){
@@ -155,16 +189,11 @@
         }
 
         playTone(tone, note, velocity = .5){
-            console.log(note)
-
             this.getTone(tone).triggerAttack(note)
-
         }
 
         stopTone(tone, note){
-
             this.getTone(tone).triggerRelease(note)
-
         }
 
         getTone(tone){
@@ -203,7 +232,7 @@
             this.controller = new Controller(this.sound);
 
             this.sound.createTone("sawtooth")
-
+            
             //debug
             setTimeout(()=>{
                 this.sound.stopTone(0);
